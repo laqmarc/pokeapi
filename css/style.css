@@ -1,0 +1,608 @@
+/* POKEAPI CSS */
+/* FONTS */
+@font-face {
+    font-family: 'pokemon';
+    src: url("fonts/Pokemon Hollow.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@font-face {
+
+    font-family: 'pokemon';
+    src: url("fonts/Pokemon Solid.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    letter-spacing: 3px;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+* {
+
+    font-family: 'pokemon';
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.fontb {
+    font-family: 'pokemon';
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #413e3e;
+}
+
+body {
+    min-height: 100vh;
+    background-color: cornflowerblue;
+}
+
+.main {
+    margin: auto;
+
+}
+
+
+/* HEADER */
+.c {
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+
+.form-group {
+    display: flex;
+}
+
+/* POPUP */
+
+.position-popup {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+}
+
+.button {
+
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    margin: 10px 3px 0px 3px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 0px 15px 6px 15px;
+}
+
+
+.button:hover {
+    font-weight: 900;
+    background-color: beige;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 70%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        width: 70%;
+    }
+
+    .popup {
+        width: 70%;
+    }
+}
+
+/* CONTAINERS */
+.containerpoke {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* INPUT */
+input#pokesearchengine {
+    width: 98%;
+    margin: 5px 0px 10px 0px;
+    border-radius: 20px 20px;
+    padding: 0px 0px 5px 10px;
+    border-color: transparent;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+input#pokesearchengine::placeholder {
+    padding: 0px 20px 0px;
+    font-weight: 600;
+}
+
+input#pokesearchengine:focus-visible {
+    outline: transparent;
+}
+
+
+/* TYPES */
+.types {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.types .card-title {
+    margin: 10px 3px 0px 3px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    padding: 0px 15px 6px 15px;
+}
+
+.types h2.card-title:hover {
+    background-color: beige;
+}
+
+
+h2.card-title:nth-last-child(0n+2),
+h2.card-title:last-child {
+    display: none;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.card-title a:hover {
+    font-weight: 900;
+}
+
+a.buttontype.card-title.button:hover {
+    background-color: beige;
+}
+
+ul.pokenames {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+
+li.pokename {
+    padding: 0px 15px 0px 0px;
+    margin-bottom: 5px;
+}
+
+a.pokenamea {
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 0px 5px;
+    background-color: #fff;
+    border: 1px solid #000;
+    font-weight: 700;
+    color: #000;
+}
+
+a.pokenamea:hover {
+    background-color: beige;
+    border: 1px solid #000;
+    font-weight: 900;
+    color: #000;
+}
+
+body#pokepage p {
+    font-weight: 600;
+}
+
+h2.fontb.stats {
+    margin: 80px 0px -15px 0px;
+}
+
+.numberpokemons.fontb {
+    font-size: 3rem;
+}
+
+.climit {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.climit div:first-child {
+    position: relative;
+    bottom: -17px;
+    left: 9px;
+    cursor: pointer;
+}
+
+.limit {
+    color: #fff;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/* POKE */
+body#pokepage {
+    background-color: beige;
+}
+
+.bigcard {
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+    max-width: 900px;
+    margin: auto;
+}
+
+.cardhead {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 35px;
+}
+
+.card-info-stats p {
+    border-bottom: 1px solid;
+}
+
+.cardbody {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+.midlecard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    border: 1px solid;
+    padding: 20px;
+    position: relative;
+}
+
+.card-info-a {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-info-a p {
+    padding-right: 50px;
+}
+
+.midlecard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-top: 10px double;
+    margin: 20px 0px;
+}
+
+a.returntohome {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    margin-right: 30px;
+    border: 1px solid;
+    color: black;
+    padding: 0px 20px 6px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 9;
+    background-color: #fff;
+}
+
+
+h2.poke-title {
+    font-size: 3rem;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    padding: 0px 25px 25px 25px;
+    margin: -15px 0px 0px 0px;
+    background-color: black;
+    color: #fff;
+    transition: 4s;
+    line-height: 1;
+}
+
+div#pokeresult {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 20px 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+img.poke-image {
+    max-width: 180px;
+    max-height: 220px;
+    transition: 0.7s;
+}
+
+img.poke-image:hover {
+    max-height: 240px;
+    width: 110%;
+    max-width: 200px;
+    transition: 0.7s;
+}
+
+.pokecard {
+    border: 1px solid;
+    margin: 5px;
+    padding: 5px;
+    min-width: 216px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.pokeimagecard {
+    background-color: aquamarine;
+    min-height: 250px;
+    vertical-align: middle;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px 20px 0px 0px;
+    transition: 0.7s;
+}
+
+.pokeimagecard:hover {
+    background-color: beige;
+    transition: 0.7s;
+}
+
+.pokeimagecard img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0px;
+    right: 0;
+}
+
+img {
+    min-height: 150px;
+}
+
+body#pokepage img {
+    min-height: 400px;
+    min-width: 400px;
+}
+
+.pokenamecard {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.pokecard a {
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.pokeletters {
+    font-weight: 600;
+}
+
+
+
+/* FOOTER */
+svg.svgfooter {
+    width: 20px;
+    margin: 0px 0px -4px 0px;
+}
+
+footer.footer {
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    background-color: beige;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    left: 0;
+}
+
+.footer-text,
+.footer-text span,
+.footer-text a {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 776px) {
+    .cardhead {
+        display: block;
+        position: relative;
+    }
+    body#pokepage img {
+        min-width: 70%;
+        margin: 10% 15% 0%;
+    }
+    .card-info-stats {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card-info-stats p {
+        border-bottom: none;
+        border: 1px solid;
+        padding: 0px 5px;
+        margin: 5px 5px;
+        background-color: beige;
+        transition: 4s;
+    }
+
+}
+
+/* MOBILE */
+/* querries max width 600 */
+@media screen and (max-width: 600px) {
+
+    body {
+
+        margin: 0px;
+        padding: 5px 0px 0px 0px;
+    }
+
+    .c {
+        text-align: right;
+        margin: -17px 8px 10px 0px;
+    }
+
+    input#pokesearchengine {
+        margin: 5px 0px 10px 5px;
+        padding: 5px 0px 5px 10px;
+        font-size: 11px;
+        width: 94%;
+        height: 35px;
+    }
+
+    .types {
+        flex-wrap: wrap;
+        display: flex;
+        padding: 0px 5px;
+    }
+
+    div#search-result {
+        padding: 0px 10px;
+    }
+
+    .pokecard {
+
+        min-width: 93%;
+
+    }
+
+    .pokeletters {
+        font-weight: 600;
+        margin: 10px 0px 8px;
+    }
+
+    .numberpokemons.fontb {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .card-title a {
+        text-decoration: none;
+        color: black;
+        text-transform: capitalize;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .types .card-title {
+        padding: 0px 15px 0px 15px;
+    }
+
+    div#pokeresult {
+
+        margin: 20px 0px 75px;
+    }
+
+    body#pokepage img {
+        min-height: 300px;
+        max-width: 100%;
+        margin-top: 90px;
+    }
+
+    h2.poke-title {
+        font-size: 1rem;
+        position: absolute;
+        top: -3px;
+        left: 0px;
+        padding: 0px 25px 25px 25px;
+        margin: -9px 0px 0px 0px;
+        background-color: black;
+        color: #fff;
+        max-height: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    body#pokepage img {
+        min-height: 300px;
+        max-width: 100%;
+        margin: 60px 0px 0px;
+    }
+
+
+}
