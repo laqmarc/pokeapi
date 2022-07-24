@@ -1,4 +1,4 @@
-// connect to the api
+//connection to the API
 function apicon(url) {
 
     const xmlhttp = new XMLHttpRequest();
@@ -8,7 +8,7 @@ function apicon(url) {
 
 }
 
-//RENDER POKEMON CARDx
+//render Pokemon car
 function renderCards(pokemonarray, poketype) {
 
     var printnames = "";
@@ -17,8 +17,6 @@ function renderCards(pokemonarray, poketype) {
         var pokemonimage = pokemon.pokemon.url;
         const newUrlimage = pokemonimage.slice(34, pokemonimage.lastIndexOf('/'));
         var pokemonname = pokemon.pokemon.name;
-
-        // CAN BE RENDERED
         var finalurl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + newUrlimage;
         printnames += '<div class="pokecard"><a href="poke.php/?id=' + pokemonname + '">'
         printnames +=
@@ -27,7 +25,7 @@ function renderCards(pokemonarray, poketype) {
         printnames += '<div class="pokeletters">' + pokemonname + '</div>';
         printnames += '</div>';
         printnames += '</div></a></div>';
-        //FINISH RENDER
+
     }
 
     document.getElementById("numberpoke-result").innerHTML =
@@ -36,10 +34,9 @@ function renderCards(pokemonarray, poketype) {
     document.getElementById("pokeresult").innerHTML = '<ul class="pokenames">' + printnames +
         '</ul>';
 
-
 }
 
-//SEE TYPE
+//see all or type
 function seeType(ev) {
 
     ev.prevenetDefault;
@@ -61,13 +58,11 @@ function seeType(ev) {
         }
 
         renderCards(arrayfinal, poketype);
-
+    
+    //see type pokemons
     } else {
-
-        //types of pokemons
         var pokevar = apicon("https://pokeapi.co/api/v2/type/" + poketype + "/");
         renderCards(pokevar.pokemon, poketype);
-
     }
 
 }
@@ -83,8 +78,7 @@ for (const button of typebuttons) {
     });
 
 }
-//SEARCH JQUERY 
-//pokenames is pokenames.json
+//Ssearch bar. var pokenames is pokenames.json
 $('#pokesearchengine').keyup(function () {
 
     var searchField = $(this).val();
@@ -121,7 +115,7 @@ $('#pokesearchengine').keyup(function () {
 
 });
 
-//knob to change the value of the limit when all pokemons
+//knob to change the value of the limit when all pokemons mode
 knobvalue = knob.value;
 $(function () {
 
