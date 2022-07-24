@@ -6,7 +6,7 @@
 
 Jo sóc de **PHP** però tenia ganes de provar els meus límits amb Javascript.
 
-A [NEWE](https://nuwe.io/challenge/repte-4-utilitzar-api) es proposava per al repte l'ús de React, Angular o Vue.js. Jo estic fent el curs de PHP, tot i això, tenia ganes d'investigar els meus límits amb Javascript.
+A [NEWE](https://nuwe.io/challenge/repte-4-utilitzar-api) es proposava per al repte l'ús de React, Angular o Vue.js. Jo estic fent l'itinerari de PHP, tot i això, tenia ganes d'investigar els meus límits amb Javascript.
 
 ## Us
 
@@ -34,17 +34,17 @@ Les vistes estan pensades per a desktop, tablet i telèfons, adaptant les vistes
 
 ### Per a la versió 0.2
 
-- [ ] Implementar un *"next page"* al buscador amb límit i offset a forma de paginació. [pagination](https://pokeapi.co/docs/v2#resource-listspagination-section)
+- [ ] Implementar un *"next page"* al buscador amb límit i offset a forma de paginació. [Pagination](https://pokeapi.co/docs/v2#resource-listspagination-section)
 
 - [ ] A la pàgina d'informació del Pokemon, veure l'evolució del Pokemon en qüestió amb desplegables per poder visulitzar la informació bàsica del Pokemon amb un *"hover"* i poder anar a la fitxa. 
 
-- [] Una animacó de l'evolució fent "morphing" als svg's amb la llibreria [snapsvg](http://snapsvg.io/). 
+- [] Una animacó de l'evolució fent "morphing" als svg's amb la llibreria [Snapsvg](http://snapsvg.io/). 
 
 - [ ] Que el buscador funcioni amb totes les tipologies de cerca.
 
 ### Per a la versió 0.3
 
-- [ ] Interactuar quan estigui operativa la versió de l'API amb [graphql] (https://pokeapi.co/docs/graphql).
+- [ ] Interactuar quan estigui operativa la versió de l'API amb [Graphql](https://pokeapi.co/docs/graphql).
 
 **Per a més versions, el futur ja dirà**.
 
