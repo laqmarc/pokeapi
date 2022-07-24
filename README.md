@@ -36,7 +36,7 @@ Les vistes estan pensades per a desktop, tablet i telèfons, adaptant les vistes
 
 - [ ] A la pàgina d'informació del Pokemon, veure l'evolució del Pokemon en qüestió amb desplegables per poder visulitzar la informació bàsica del Pokemon amb un *hover* i poder anar a la fitxa. 
 
-- [] Una animacó de l'evolució fent "morphing" als svg's amb la llibreria [Snapsvg](http://snapsvg.io/). 
+- [ ] Una animacó de l'evolució fent *morphing* als svg's amb la llibreria [Snapsvg](http://snapsvg.io/). 
 
 - [ ] Que el buscador funcioni amb totes les tipologies de cerca.
 
