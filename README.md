@@ -26,16 +26,15 @@ Les vistes estan pensades per a desktop, tablet i telèfons, adaptant les vistes
 
 ## Contribucions
 
-### **El codi ha de ser lliure**: 
-pull request, forks, clones i descarregues són benvingudes.
+**El codi ha de ser lliure**: pull request, forks, clones i descarregues són benvingudes.
 
 ## TODO en futures versions
 
 ### Per a la versió 0.2
 
-- [ ] Implementar un *"next page"* al buscador amb límit i offset a forma de paginació. [Pagination](https://pokeapi.co/docs/v2#resource-listspagination-section)
+- [ ] Implementar un *next page* al buscador amb límit i offset a forma de paginació. [Pagination](https://pokeapi.co/docs/v2#resource-listspagination-section)
 
-- [ ] A la pàgina d'informació del Pokemon, veure l'evolució del Pokemon en qüestió amb desplegables per poder visulitzar la informació bàsica del Pokemon amb un *"hover"* i poder anar a la fitxa. 
+- [ ] A la pàgina d'informació del Pokemon, veure l'evolució del Pokemon en qüestió amb desplegables per poder visulitzar la informació bàsica del Pokemon amb un *hover* i poder anar a la fitxa. 
 
 - [] Una animacó de l'evolució fent "morphing" als svg's amb la llibreria [Snapsvg](http://snapsvg.io/). 
 
@@ -45,7 +44,7 @@ pull request, forks, clones i descarregues són benvingudes.
 
 - [ ] Interactuar quan estigui operativa la versió de l'API amb [Graphql](https://pokeapi.co/docs/graphql).
 
-**Per a més versions, el futur ja dirà**.
+**_Per a més versions, el futur ja dirà_**.
 
 ## Projecte online
 
