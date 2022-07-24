@@ -1,6 +1,4 @@
-# pokeapi
-
-**Pokeapi** *v0.1*
+# **Pokeapi** *v0.1*
 
 **Pokeapi** és un aplicatiu per consultar l'**API de Pokemon** [PokeAPI](https://pokeapi.co/).
 
