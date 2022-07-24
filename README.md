@@ -8,15 +8,15 @@ A [NEWE](https://nuwe.io/challenge/repte-4-utilitzar-api) es proposava per al re
 
 ## Us
 
-La meva versió de la **Pokeapi** té un buscador general que llegeix d'un json els 1154 noms i id dels Pokemons en forma de caché per poder fer una *"live search"*. 
+La meva versió de la **Pokeapi** té un buscador general que llegeix d'un json els 1154 noms i id dels Pokemons en forma de caché per poder fer una *live search*. 
 
-També et permet veure tots els Pokemons, al clicar el botó *"All with limit"*, s'obre un popup que té un knob que limita el número de Pokemons a escollir del total.
+També et permet veure tots els Pokemons, al clicar el botó *All with limit*, s'obre un popup que té un knob que limita el número de Pokemons a escollir del total.
 
 També pots llistar pel tipus de Pokemons que existeixen on, al clicar el botó corresponent al tipus, t'apareixen tots els de la tipologia demanada. 
 
 No totes les fotos apareixen i he posat una foto genérica quan això passa.
 
-Un cop cliques a una carta, t'apareix tota la informació del Pokemon en qüestió. Connectant a */pokemon, /pokemon-species* i /*generation*.
+Un cop cliques a una carta, t'apareix tota la informació del Pokemon en qüestió. Connectant a */pokemon, /pokemon-species* i */generation*.
 
 ## Tecnologies
 
@@ -26,7 +26,8 @@ Les vistes estan pensades per a desktop, tablet i telèfons, adaptant les vistes
 
 ## Contribucions
 
-**El codi ha de ser lliure**: pull request, forks, clones i descarregues són benvingudes.
+### **El codi ha de ser lliure**: 
+pull request, forks, clones i descarregues són benvingudes.
 
 ## TODO en futures versions
 
