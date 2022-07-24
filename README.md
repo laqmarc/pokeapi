@@ -29,6 +29,7 @@ Les vistes estan pensades per a desktop, tablet i telèfons, adaptant les vistes
 ## TODO en futures versions
 
 ### Per a la versió 0.2
+- [ ] Treure el bug de quan borres tota la cerca al buscador el contador es posi a 0 i no en el anterior ha ser borrat totalment.
 
 - [ ] Implementar un *next page* al buscador amb límit i offset a forma de paginació. [Pagination](https://pokeapi.co/docs/v2#resource-listspagination-section)
 
