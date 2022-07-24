@@ -16,7 +16,7 @@
 
     require_once './php/connections.php';
 
-    $pokeimage = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/'.$pokemon['id'].'.png"';
+    $pokeimage = 'http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/'.$pokemon['id'].'.png"';
 
 
     //POKE CARD INFO
@@ -33,20 +33,20 @@
                     echo '<p><span class="fontb">Height: </span>'.$pokemon['height'].'</span></p>';
                     echo '<p><span class="fontb">Weight: </span>'.$pokemon['weight'].'</span></p>';
                     echo '<p><span class="fontb">Base experience: </span>'.$pokemon['base_experience'].'</span></p>';
-                    echo '<p><span class="fontb">Base happiness:'. $ps['base_happiness'].' </span></p>';
-                    echo '<p><span class="fontb">Capture Rate:'. $ps['capture_rate'].' </span></p>';
+                    echo '<p><span class="fontb">Base happiness:'. $pokemmonSpecie['base_happiness'].' </span></p>';
+                    echo '<p><span class="fontb">Capture Rate:'. $pokemmonSpecie['capture_rate'].' </span></p>';
             echo '</div></div>';
 
             echo '<div class="midlecard">';
                 echo '<div class="card-info-midd br">';
-                    echo '<div class="fontb mt20 font15">'. $ps['flavor_text_entries'][2]['flavor_text'].' </div>';
-                    echo '<div class="fontb mt20">Color:'. $ps['color']['name'].' </div>';
-                    echo '<div class="fontb mt20">Gender:'. $ps['genera'][7]['genus'].' </div>';
-                    echo '<div class="fontb mt20">'. $gn['names'][5]['name'].' </div>';
-                    if(empty($ps['habitat']['name'])){
+                    echo '<div class="fontb mt20 font15">'. $pokemmonSpecie['flavor_text_entries'][2]['flavor_text'].' </div>';
+                    echo '<div class="fontb mt20">Color:'. $pokemmonSpecie['color']['name'].' </div>';
+                    echo '<div class="fontb mt20">Gender:'. $pokemmonSpecie['genera'][7]['genus'].' </div>';
+                    echo '<div class="fontb mt20">'. $generationName['names'][5]['name'].' </div>';
+                    if(empty($pokemmonSpecie['habitat']['name'])){
                         echo "";
                     }else{
-                        echo '<div class="fontb mt20">Where to find:'. $ps['habitat']['name'].' </div>';
+                        echo '<div class="fontb mt20">Where to find:'. $pokemmonSpecie['habitat']['name'].' </div>';
                     }
                 echo '</div>';
             echo '</div>';

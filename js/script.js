@@ -27,17 +27,33 @@ function seePoke(str) {
 }
 
 //RENDER POKEMON CARDx
-function renderCards(printnames, pokemonname, finalurl, newUrlimage) {
+function renderCards(pokemonarray, poketype) {
 
-    var finalurl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + newUrlimage;
-    printnames += '<div class="pokecard"><a href="poke.php/?id=' + pokemonname + '">'
-    printnames +=
-        '<div class="pokeimagecard"><img class="poke-image"   src="' + finalurl + '.png" onerror="imgError(this);" alt="' + pokemonname + '" /></div>';
-    printnames += '<div class="pokenamecard">';
-    printnames += '<div class="pokeletters">' + pokemonname + '</div>';
-    printnames += '</div>';
-    printnames += '</div></a></div>';
-    
+    var printnames = "";
+    var poketype = "";
+    for (const pokemon of pokemonarray) {
+        var pokemonimage = pokemon.pokemon.url;
+        const newUrlimage = pokemonimage.slice(34, pokemonimage.lastIndexOf('/'));
+        var pokemonname = pokemon.pokemon.name;
+
+        // CAN BE RENDERED
+        var finalurl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + newUrlimage;
+        printnames += '<div class="pokecard"><a href="poke.php/?id=' + pokemonname + '">'
+        printnames +=
+            '<div class="pokeimagecard"><img class="poke-image" src="' + finalurl + '.png" onerror="imgError(this);" alt="' + pokemonname + '" /></div>';
+        printnames += '<div class="pokenamecard">';
+        printnames += '<div class="pokeletters">' + pokemonname + '</div>';
+        printnames += '</div>';
+        printnames += '</div></a></div>';
+        //FINISH RENDER
+    }
+
+    document.getElementById("numberpoke-result").innerHTML =
+        '<div class="numberpokemons fontb">Number of ' + poketype + ' Pokemons: ' + pokemonarray.length +
+        '</div>';
+    document.getElementById("pokeresult").innerHTML = '<ul class="pokenames">' + printnames +
+        '</ul>';
+
 
 }
 
@@ -50,59 +66,27 @@ function seeType(ev) {
     //all pokemons with limit on knob
     if (poketype == "all") {
         var pokevar = apicon("https://pokeapi.co/api/v2/pokemon?limit=" + knob.value + "&offset=0");
-        var printnames = "";
-        var numberpoke = pokevar.results.length;
-        let i = -1;
-
+        var arrayfinal = [];
         for (const pokemon of pokevar.results) {
-            ++i;
-            var pokemonimage = pokevar.results[i].url;
-            const newUrlimage = pokemonimage.slice(34, pokemonimage.lastIndexOf('/'));
-            var pokemonname = pokevar.results[i].name;
+            var currentPokemon = {
+                'pokemon': {
+                    'name': pokemon.name,
+                    'url': pokemon.url
+                }
+            }
+            arrayfinal.push(currentPokemon);
 
-            // CAN BE RENDERED            
-            var finalurl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + newUrlimage;
-            printnames += '<div class="pokecard"><a href="poke.php/?id=' + pokemonname + '">'
-            printnames +=
-                '<div class="pokeimagecard"><img class="poke-image"   src="' + finalurl + '.png" onerror="imgError(this);" alt="' + pokemonname + '" /></div>';
-            printnames += '<div class="pokenamecard">';
-            printnames += '<div class="pokeletters">' + pokemonname + '</div>';
-            printnames += '</div>';
-            printnames += '</div></a></div>';
-            // renderCards(printnames, pokemonname, finalurl,newUrlimage);
-
-            //FINISH RENDER
         }
+
+        renderCards(arrayfinal, poketype);
 
     } else {
 
         //types of pokemons
         var pokevar = apicon("https://pokeapi.co/api/v2/type/" + poketype + "/");
-        var printnames = "";
-        var numberpoke = pokevar.pokemon.length;
-        for (const pokemon of pokevar.pokemon) {
-            var pokemonimage = pokemon.pokemon.url;
-            const newUrlimage = pokemonimage.slice(34, pokemonimage.lastIndexOf('/'));
-            var pokemonname = pokemon.pokemon.name;
+        renderCards(pokevar.pokemon, poketype);
 
-            // CAN BE RENDERED
-            var finalurl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + newUrlimage;
-            printnames += '<div class="pokecard"><a href="poke.php/?id=' + pokemonname + '">'
-            printnames +=
-                '<div class="pokeimagecard"><img class="poke-image" src="' + finalurl + '.png" onerror="imgError(this);" alt="' + pokemonname + '" /></div>';
-            printnames += '<div class="pokenamecard">';
-            printnames += '<div class="pokeletters">' + pokemonname + '</div>';
-            printnames += '</div>';
-            printnames += '</div></a></div>';
-            //FINISH RENDER
-        }
     }
-
-    document.getElementById("numberpoke-result").innerHTML =
-        '<div class="numberpokemons fontb">Number of ' + poketype + ' Pokemons: ' + numberpoke +
-        '</div>';
-    document.getElementById("pokeresult").innerHTML = '<ul class="pokenames">' + printnames +
-        '</ul>';
 
 }
 
@@ -118,7 +102,7 @@ for (const button of typebuttons) {
 
 }
 //SEARCH JQUERY 
-//pokenames is a json
+//pokenames is pokenames.json
 $('#pokesearchengine').keyup(function () {
 
     var searchField = $(this).val();
@@ -189,17 +173,20 @@ function imgError(image) {
 
 //back to top
 mybutton = document.getElementById("backtotop");
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+    scrollFunction()
+};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop >300) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 300) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
+
 function topFunction() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 
 }

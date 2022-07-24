@@ -2,7 +2,7 @@
 
 require_once './php/connection.php';
 
-    if (isset($_POST))
+    if (isset($_GET['id']))
     {
    
         $name = $_GET['id'];
@@ -10,24 +10,19 @@ require_once './php/connection.php';
         //connection to pokemon
    
         $url = "https://pokeapi.co/api/v2/pokemon/$name/"; 
-        $connn = new Connection();
-        $r = $connn->getConnection($url);
-        $pokemon = json_decode($r, true);  
+        $connectionApi = new Connection();
+        $connectionResponse = $connectionApi->getConnection($url);
+        $pokemon = json_decode($connectionResponse, true);  
 
         //conection to pokemon-species
 
-        $conhabitat = new Connection();
-        $h = $conhabitat->getConnection($pokemon['species']['url']);
-        $ps = json_decode($h, true);
+        $h = $connectionApi->getConnection($pokemon['species']['url']);
+        $pokemmonSpecie = json_decode($h, true);
 
         // Connection to generation name
 
-        $generationname = new Connection();
-        $generation = $generationname->getConnection($ps['generation']['url']);
-        $gn = json_decode($generation, true);
-
-        
-
+        $generation = $connectionApi->getConnection($pokemmonSpecie['generation']['url']);
+        $generationName = json_decode($generation, true);
 
     }
 
