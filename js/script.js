@@ -131,6 +131,11 @@ $('#pokesearchengine').keyup(function () {
             }
             count++;
         }
+        else {
+            if(output === ''){
+                output += '<div class="notfound">NOT FOUND</div>';
+            }
+        }
 
     });
 
