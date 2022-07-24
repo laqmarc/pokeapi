@@ -10,6 +10,7 @@ require_once './php/connection.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokeapi</title>
+    <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/pokenames.js"></script>
     <script src="./js/jq.js"></script>
