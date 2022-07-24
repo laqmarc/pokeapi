@@ -8,24 +8,6 @@ function apicon(url) {
 
 }
 
-//SEE POKEMON
-function seePoke(str) {
-
-    if (str.length <= 2) {
-        document.getElementById("search-result").innerHTML = "";
-        return;
-    } else {
-        const xmlhttp = new XMLHttpRequest();
-        xmlhttp.onload = function () {
-            document.getElementById("search-result").innerHTML = this.responseText;
-        }
-
-        xmlhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/" + str, true);
-        xmlhttp.send();
-    }
-
-}
-
 //RENDER POKEMON CARDx
 function renderCards(pokemonarray, poketype) {
 
