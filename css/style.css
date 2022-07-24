@@ -546,14 +546,6 @@ svg.black {
     margin: 0px 0px -2px 0px;
 }
 
-.notfound {
-    position: absolute;
-    background-color: white;
-    padding: 0px 20px;
-    font-weight: 100;
-    border-radius: 20px;
-}
-
 @media screen and (max-width: 776px) {
     .cardhead {
         display: block;
