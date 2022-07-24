@@ -19,11 +19,6 @@
     letter-spacing: 3px;
 }
 
-html {
-    scroll-behavior: smooth;
-
-}
-
 * {
 
     font-family: 'pokemon';
@@ -43,6 +38,12 @@ a {
     color: #413e3e;
 }
 
+/* MAIN */
+html {
+    scroll-behavior: smooth;
+
+}
+
 body {
     background-color: #BBBBF9;
 }
@@ -52,10 +53,8 @@ body {
 
 }
 
-/* STARS */
-
-
 /* HEADER */
+
 .c {
     text-align: center;
     margin: -15px 0px 0px 0px;
@@ -99,7 +98,6 @@ body {
     padding: 10px 15px 10px 15px;
     font-weight: 600;
 }
-
 
 .button:hover {
     font-weight: 100;
@@ -160,15 +158,6 @@ body {
     overflow: auto;
 }
 
-@media screen and (max-width: 700px) {
-    .box {
-        width: 70%;
-    }
-
-    .popup {
-        width: 70%;
-    }
-}
 
 /* CONTAINERS */
 .containerpoke {
@@ -226,10 +215,6 @@ h2.card-title:last-child {
     cursor: pointer;
     font-weight: 600;
 }
-
-/* .card-title a:hover {
-    font-weight: 900;
-} */
 
 a.buttontype.card-title.button:hover {
     background-color: beige;
@@ -591,6 +576,16 @@ svg.black {
         margin-top: 20px
     }
 
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        width: 70%;
+    }
+
+    .popup {
+        width: 70%;
+    }
 }
 
 /* MOBILE */
