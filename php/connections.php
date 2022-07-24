@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../pokeapi/php/connection.php';
+require_once './php/connection.php';
 
     if (isset($_POST))
     {
