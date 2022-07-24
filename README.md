@@ -1,12 +1,10 @@
 # pokeapi
 
-**Pokeapi v0.1**
+**Pokeapi** *v0.1*
 
-**Pokeapi** és un aplicatiu per consultar l'API de Pokemon.
+**Pokeapi** és un aplicatiu per consultar l'**API de Pokemon** [PokeAPI](https://pokeapi.co/).
 
-Jo sóc de **PHP** però tenia ganes de provar els meus límits amb Javascript.
-
-A [NEWE](https://nuwe.io/challenge/repte-4-utilitzar-api) es proposava per al repte l'ús de React, Angular o Vue.js. Jo estic fent l'itinerari de PHP, tot i això, tenia ganes d'investigar els meus límits amb Javascript.
+A [NEWE](https://nuwe.io/challenge/repte-4-utilitzar-api) es proposava per al repte l'ús de React, Angular o Vue.js. Jo estic fent l'itinerari de **PHP**, tot i això, tenia ganes d'investigar els meus límits amb Javascript.
 
 ## Us
 
