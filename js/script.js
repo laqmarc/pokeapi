@@ -112,7 +112,7 @@ $('#pokesearchengine').keyup(function () {
 
     output += '</div>';
     $('#pokeresult').html(output);
-    $('#numberpoke-result').html('<div class="numberpokemons fontb">Number of  Pokemons: ' + count + '</div>');
+    $('#numberpoke-result').html('<div class="numberpokemons fontb">Number of  Pokemons: ' + (count - 1) + '</div>');
 
 });
 
